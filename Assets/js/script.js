@@ -1,2 +1,14 @@
 // need to select div with class description
-// upon user click, switch from p element to textarea element and on user blur, convert into a paragraph
+tasks = [];
+
+// need to 
+
+
+
+
+$(".saveBtn").on("click", function () {
+    var text = $("textarea").val().trim();
+    // take textarea and save to local storage and convert into p element
+    localStorage.setItem("tasks", tasks)
+})
+
