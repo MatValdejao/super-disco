@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -19,11 +19,11 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  margin-bottom: 0px;
 }
 
 .description{
   white-space: pre-wrap;
-  height: 100%;
 }
 
 .time-block{
@@ -70,4 +70,21 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
   color: black;
+}
+
+.saveMessage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  white-space: pre;
+}
+
+.red-text {
+  color: #ff6961;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bi-check2 {
+  color: darkgreen;
+  font-size: 1.3rem;
 }

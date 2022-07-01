@@ -1,5 +1,6 @@
 $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do" ));
 
+// upon button click, save text and hour time and display message to let user know every is saved
 $(".time-block").on("click", ".saveBtn", function () {
   // save textarea text upon button click
   var text = $("textarea").val().trim();
@@ -8,7 +9,21 @@ $(".time-block").on("click", ".saveBtn", function () {
 
   // save data into storage
   localStorage.setItem(hour, text);
+
+  saveMessage();
 });
+
+var saveMessage = function () {
+  // check whether span element already exits and delete if so
+  if ($("header").children("span") != undefined) {
+    $("header").children("span").remove();
+  }
+  // create span element
+  var pMessageEl = $("<span>").addClass("saveMessage").html("Appoitment Added to<span class='red-text'> localStorage</span><i class='bi bi-check2'></i>");
+
+  // append as first child to container
+  $(".container").prepend(pMessageEl);
+}
 
 $("#hour9")
   .children(".description")
