@@ -1,4 +1,7 @@
-$("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do"));
+// display current day continuosly in military time
+setInterval(function () {
+  $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do H:mm:ss"));
+}, 1);
 
 // check current time and compare to each
 var todayHour = parseInt(moment().format("HH"));
@@ -22,18 +25,19 @@ var timeCompare = function () {
       $("#hour" + time).css("backgroundColor", "lightgrey");
     }
   }
-  
-  
-
 }
 
 // upon button click, save text and hour time and display message to let user know every is saved
 $(".time-block").on("click", ".saveBtn", function () {
-  // save textarea text upon button click
-  var text = $("textarea").val().trim();
   // save hour id upon button click
   var hour = $(this).parent(".time-block").attr("id");
 
+  // save specific textarea text upon button click
+  var text = $("#" + hour)
+    .children(".description")
+    .val()
+    .trim();
+  
   // save data into storage
   localStorage.setItem(hour, text);
 
