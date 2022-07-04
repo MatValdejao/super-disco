@@ -20,4 +20,4 @@ This website is a daily planner that allows for tracking of daily tasks. The use
 https://matvaldejao.github.io/workday-schedule/
 
 ## Website Screenshot
-![image](.)
+![image](./Assets/Images/workday.png)
