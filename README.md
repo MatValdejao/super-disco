@@ -1,4 +1,4 @@
-# Work Day Scheduler Starter Code
+# Work Day Scheduler
 
 ## Purpose
 This website is a daily planner that allows for tracking of daily tasks. The user writes their tasks for the day using hourly time-blocks. When the user then saves the task with a button click, the task is saved into local storage and will persist. This website is perfect for busy people that need a way to track their tasks for the day. The website is user friendly and allows for easy manipulation of tasks to ensure best preparation and planning possible. 
